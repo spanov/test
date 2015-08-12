@@ -37,7 +37,20 @@ $config = [
                 ],
             ],
         ],
+        'urlManager' => [
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+            'enableStrictParsing' => false,
+            'rules' => [
+                'ajax/<module:\w+>/<action:\w+>' => 'modules/<module>/default/<action>',
+            ],
+        ],
         'db' => require(__DIR__ . '/db.php'),
+    ],
+    'modules' => [
+        'shape' => [
+            'class' => 'app\modules\shape\Module',
+        ],
     ],
     'params' => $params,
 ];
