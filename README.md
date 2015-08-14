@@ -13,5 +13,5 @@ https://github.com/spanov/test/blob/master/books.sql
 # Задание 3
 
 Данный запрос, возвратит необходимые результаты
-SELECT type, max(date) as maxDate FROM media GROUP BY type ORDER BY maxDate
+SELECT type, max(date) as maxDate, value FROM media GROUP BY type ORDER BY maxDate
 
